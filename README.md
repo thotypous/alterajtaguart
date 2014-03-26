@@ -6,7 +6,7 @@ The Altera JTAG UART is a serial interface which can be used for bidirectional c
 Similar work
 ============
 
-An implementation similar to ours is [available](http://asim.csail.mit.edu/redmine/projects/leap-platforms/repository/entry/trunk/modules/bluespec/common/fpgaenv/physical-platform/altera_jtag/jtag/altera-jtag.bsv) from Intel/MIT designers, but it has a larger overhead because it uses an internal Avalon bus in order to be able to access an Altera JTAG UART instantiated by SOPCBuilder/QSYS. Our implementation, on the other hand, uses directly the *undocumented* `alt_jtag_atlantic` megafunction.
+An implementation similar to ours is [available](http://asim.csail.mit.edu/redmine/projects/leap-platforms/repository/entry/trunk/modules/bluespec/common/fpgaenv/physical-platform/physical-devices/jtag/altera/AvalonJtag.bsv) from Intel/MIT designers, but it has a larger overhead because it uses an internal Avalon bus in order to be able to access an Altera JTAG UART instantiated by SOPCBuilder/QSYS. Our implementation, on the other hand, uses directly the *undocumented* `alt_jtag_atlantic` megafunction.
 
 AlteraJtagUart interface
 ========================
