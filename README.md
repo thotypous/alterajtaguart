@@ -1,7 +1,7 @@
 Introduction
 =============
 
-The Altera JTAG UART is a serial interface which can be used for bidirectional communications between a FPGA and a computer. Like the [AltSourceProbe](https://github.com/thotypous/altsourceprobe) module, it can be used as a *portable* bus supported across all Altera FPGAs, due to the ubiquity of JTAG pins in these devices. However, Altera JTAG UART is much faster than AltSourceProbe, being able to achieve data rates in the order of 1 Mbit/s, though AltSourceProbe is best suited and easier to use for debugging hardware designs, whereas the UART is better for transferring larger amounts of data or test vectors.
+The Altera JTAG UART is a serial interface which can be used for bidirectional communications between a FPGA and a computer. Like the [AltSourceProbe](https://github.com/thotypous/altsourceprobe) module, it can be used as a *portable* bus supported across all Altera FPGAs, due to the ubiquity of JTAG pins in these devices, which in development kits are readily acessible in a computer using the same USB cable as used for programming the FPGA. However, Altera JTAG UART is much faster than AltSourceProbe, being able to achieve data rates in the order of 1 Mbit/s, though AltSourceProbe is best suited and easier to use for debugging hardware designs, whereas the UART is better for transferring larger amounts of data or test vectors.
 
 Similar work
 ============
