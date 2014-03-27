@@ -43,13 +43,6 @@ import "BVI" alt_jtag_atlantic =
         schedule (read) CF (read);
     endmodule
 
-function Integer pow2(Integer n);
-    Integer res = 1;
-    for(Integer i = 0; i < n; i = i + 1)
-        res = res * 2;
-    return res;
-endfunction
-
 interface AlteraJtagUart;
     interface Put#(JtagWord) tx;
     interface Get#(JtagWord) rx;
@@ -57,8 +50,8 @@ endinterface
 
 module mkAlteraJtagUart#(Integer log2rx, Integer log2tx) (AlteraJtagUart);
     AltJtagAtlantic atlantic <- mkAltJtagAtlantic(log2rx, log2tx);
-    FIFOF#(JtagWord) rxfifo <- mkSizedFIFOF(pow2(log2rx));
-    FIFOF#(JtagWord) txfifo <- mkSizedFIFOF(pow2(log2tx));
+    FIFOF#(JtagWord) rxfifo <- mkSizedFIFOF(2**log2rx);
+    FIFOF#(JtagWord) txfifo <- mkSizedFIFOF(2**log2tx);
     Reg#(Bool) can_tx <- mkReg(False);
 
     rule ask_tx;
